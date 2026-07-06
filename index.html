@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta name="robots" content="noindex, nofollow">
+  <script>
+    if (window.self !== window.top) {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      window.addEventListener('message', function(e) {
+        if (e.data && e.data.type === 'poli-theme') {
+          document.documentElement.setAttribute('data-theme', e.data.light ? 'light' : 'dark');
+        }
+      });
+    }
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Educational anatomy suitability reference for genital piercings — gauge, healing times, material recommendations, and contraindications for 8 genital placement types.">
+  <title>Genital Piercing Anatomy Suitability Checker | Poli International</title>
+  <link rel="stylesheet" href="/tools/genital-piercing-suitability/css/style.css">
+</head>
+<body>
+
+<div class="tool-wrapper">
+
+  <header class="tool-header">
+    <div class="tool-header__badge">🔬 Anatomy Reference</div>
+    <h1>Genital Piercing Anatomy Suitability</h1>
+    <p>
+      Educational reference covering anatomy requirements, gauge, healing time,
+      material recommendations, and contraindications for 8 genital placement types.
+    </p>
+  </header>
+
+  <div class="age-gate">
+    <strong>18+ Educational Content</strong>
+    This tool is an anatomy and jewellery reference for adults considering or researching genital piercings.
+    All content is clinical and educational. Genital piercings should only be performed by APP-certified
+    piercers with specific genital piercing experience.
+  </div>
+
+  <div class="select-card">
+    <div class="form-grid">
+      <div class="form-field">
+        <label for="anatomy-filter">Anatomy type</label>
+        <select id="anatomy-filter" class="input-field">
+          <option value="all">All placements</option>
+          <option value="female">Female anatomy</option>
+          <option value="male">Male anatomy</option>
+        </select>
+      </div>
+      <div class="form-field">
+        <label for="piercing-select">Piercing type</label>
+        <select id="piercing-select" class="input-field"></select>
+      </div>
+    </div>
+  </div>
+
+  <div id="piercing-info"></div>
+
+  <div class="disclaimer">
+    <strong>Important:</strong> Anatomy suitability cannot be assessed remotely. All information here is
+    educational — actual suitability requires in-person examination by a qualified APP-certified piercer.
+    Do not perform or modify genital piercings without professional guidance. If you experience pain,
+    unusual discharge, or signs of infection, seek medical attention promptly.
+  </div>
+
+</div>
+
+<script src="/tools/genital-piercing-suitability/js/app.js"></script>
+</body>
+</html>
