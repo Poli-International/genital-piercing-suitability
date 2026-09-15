@@ -1,90 +1,77 @@
-# Genital Piercing Anatomy Suitability Checker
+# Genital Piercing Anatomy Suitability Checker (V2)
 
-> **Anatomy suitability reference for 8 genital piercing types. Gauge, healing times, materials, and contraindications for VCH, PA, apadravya, more.**
+> **Educational anatomy suitability reference covering 14 genital piercing placements. Requirements, in-person assessment, starting jewellery facts, and clinical reasons for refusal.**
 
-[![License](https://img.shields.io/github/license/Poli-International/genital-piercing-suitability)](LICENSE)
-[![Last Commit](https://img.shields.io/github/last-commit/Poli-International/genital-piercing-suitability)](https://github.com/Poli-International/genital-piercing-suitability/commits/main)
-[![GitHub Stars](https://img.shields.io/github/stars/Poli-International/genital-piercing-suitability?style=social)](https://github.com/Poli-International/genital-piercing-suitability/stargazers)
-
-**Live Demo:** [https://poliinternational.com/tools/genital-piercing-suitability/](https://poliinternational.com/tools/genital-piercing-suitability/)
+**Live Reference:** [https://poliinternational.com/tools/genital-piercing-suitability/index.html](https://poliinternational.com/tools/genital-piercing-suitability/index.html)
 
 ---
 
-## 🎯 Overview
+## Overview
 
-Anatomy suitability reference for 8 genital piercing types. Gauge, healing times, materials, and contraindications for VCH, PA, apadravya, more.
+An educational reference covering anatomical conditions required, key questions for in-person consultation, typical healing timeframes, and clinical reasons a placement may not be advised for 14 genital piercing placements.
 
-**Category:** Piercing Science
-
-This is a free, open-source widget from the [Poli International Widget Suite](https://poliinternational.com/tools/) - a collection of practical tools for tattoo and piercing studios, artists, and clients. It runs entirely in the browser; no data is sent to a server.
+This is a free, open-source tool published by Poli International for piercers, studio staff, and clients researching anatomy suitability. The tool operates client-side in the browser; no personal data is collected or transmitted.
 
 ---
 
-## ✨ Features
+## Placements Covered (14)
 
-- ✅ **Genital Piercing Suitability**
-- ✅ **VCH Anatomy Suitability**
-- ✅ **PA Piercing Anatomy**
-- ✅ **Genital Piercing Guide**
-- ✅ **Body Jewelry Genital Piercings**
-- ✅ **APP Genital Piercing**
-- ✅ **Responsive Design** - works on desktop, tablet, and mobile.
-- ✅ **Free & Open Source** - MIT licensed.
-
----
-
-## 🎬 Demo
-
-### Try It Live
-
-**👉 [Use the tool now](https://poliinternational.com/tools/genital-piercing-suitability/)**
+- **VCH (Vertical Clitoral Hood)**
+- **HCH (Horizontal Clitoral Hood)**
+- **Triangle**
+- **Christina (Venus)**
+- **Inner Labia (Labia Minora)**
+- **Outer Labia (Labia Majora)**
+- **Fourchette**
+- **PA (Prince Albert)**
+- **Reverse PA**
+- **Apadravya**
+- **Ampallang**
+- **Frenum**
+- **Guiche**
+- **Dydoe**
 
 ---
 
-## 🚀 Installation
+## Key Features
 
-### Option 1: Use Online (Recommended)
+- **Search by Common Names**: Type natural search terms such as "clit hood piercing", "PA", "Prince Albert", "guiche", etc.
+- **Anatomy Filtering**: Filter by female, male, or shared anatomy categories.
+- **Schematic Tissue Diagrams**: Neutral, non-explicit cross-sectional tissue diagrams readable in greyscale, collapsed by default for quiet reading.
+- **Consultation Questions**: Specific talking points to review during an in-person physical consultation.
+- **"Is It Right for Me?" Interactive Worksheet**: Private reflection area with opt-in storage and printable consultation sheet.
+- **Zero External Dependencies**: Self-contained client-side tool with no CDNs, external fonts, or third-party trackers.
 
-No installation needed! Just visit:
-**[https://poliinternational.com/tools/genital-piercing-suitability/](https://poliinternational.com/tools/genital-piercing-suitability/)**
+---
 
-### Option 2: Run Locally
+## Running Locally
 
-This tool is pure HTML/CSS/JS - no build step. Clone the repo and open `index.html`:
+This tool runs on plain Node.js (>=20) with Express, or can be opened directly as static HTML.
 
 ```bash
-git clone https://github.com/Poli-International/genital-piercing-suitability.git
-cd genital-piercing-suitability
-# open index.html in your browser
+# Install dependencies
+npm install
+
+# Check syntax
+npm run lint
+
+# Verify build
+npm run build
+
+# Start local server on port 3000
+npm start
 ```
 
 ---
 
-## 🤝 Contributing
+## Documentation
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details.
+- [User Guide](docs/USER-GUIDE.md)
+- [Technical Documentation](docs/TECHNICAL-DOCS.md)
+- [Contributing Guide](CONTRIBUTING.md)
 
 ---
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-## 💬 Support
-
-### Get Help
-
-- 📧 **Email**: <support@poliinternational.com>
-- 🐛 **Bug Reports**: [GitHub Issues](https://github.com/Poli-International/genital-piercing-suitability/issues)
-
----
-
-<div align="center">
-
-**Made with ❤️ by [Poli International](https://poliinternational.com)**
-
-[Website](https://poliinternational.com) • [Tools](https://poliinternational.com/tools/) • [GitHub](https://github.com/Poli-International)
-
-</div>
