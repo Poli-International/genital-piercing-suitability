@@ -1,7 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="robots" content="noindex, nofollow">
+  <title data-i18n="app.page_title">Genital Piercing Anatomy Suitability Checker | Poli International</title>
+  <meta name="description" content="Educational anatomy suitability reference for 14 genital piercing placements: the anatomical requirements, the in-person assessment, starting jewellery, and the reasons a placement is refused.">
+  <meta property="og:title" content="Genital Piercing Anatomy Suitability Checker | Poli International">
+  <meta property="og:description" content="Educational anatomy suitability reference for 14 genital piercing placements: the anatomical requirements, the in-person assessment, starting jewellery, and the reasons a placement is refused.">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="css/style.css">
   <script>
     if (window.self !== window.top) {
       document.documentElement.setAttribute('data-theme', 'dark');
@@ -12,60 +20,162 @@
       });
     }
   </script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Educational anatomy suitability reference for genital piercings — gauge, healing times, material recommendations, and contraindications for 8 genital placement types.">
-  <title>Genital Piercing Anatomy Suitability Checker | Poli International</title>
-  <link rel="stylesheet" href="/tools/genital-piercing-suitability/css/style.css">
 </head>
 <body>
+<div class="tool-wrapper" id="tool-wrapper">
 
-<div class="tool-wrapper">
+  <!-- Top Utilities Bar: Language Switcher -->
+  <div class="top-bar" id="top-bar">
+    <div class="top-bar__lang">
+      <label for="language-select" id="label-language-select" data-i18n="app.lang_label">Language</label>
+      <select id="language-select" class="select-lang" aria-label="Select language" data-i18n-attr="aria-label:app.lang_aria"></select>
+    </div>
+  </div>
 
-  <header class="tool-header">
-    <div class="tool-header__badge">🔬 Anatomy Reference</div>
-    <h1>Genital Piercing Anatomy Suitability</h1>
-    <p>
-      Educational reference covering anatomy requirements, gauge, healing time,
-      material recommendations, and contraindications for 8 genital placement types.
+  <!-- Header -->
+  <header class="tool-header" id="tool-header">
+    <div class="tool-header__badge" id="tool-badge" data-i18n="app.badge">Anatomy &amp; Consultation Reference</div>
+    <h1 id="tool-title" data-i18n="app.title">Genital Piercing Anatomy Suitability</h1>
+    <p id="tool-tagline" class="tool-subtitle" data-i18n="app.tagline">
+      Educational anatomy suitability guide covering 14 genital piercing placements. Learn the anatomical conditions required, key questions for your piercer, and reasons a placement may not be advised.
     </p>
   </header>
 
-  <div class="age-gate">
-    <strong>18+ Educational Content</strong>
-    This tool is an anatomy and jewellery reference for adults considering or researching genital piercings.
-    All content is clinical and educational. Genital piercings should only be performed by APP-certified
-    piercers with specific genital piercing experience.
+  <!-- One line on Age and Consent -->
+  <div class="age-banner" id="age-banner" role="region" aria-label="Age and consent notice" data-i18n-attr="aria-label:app.age_banner_aria">
+    <span class="age-banner__icon" aria-hidden="true">🔞</span>
+    <span id="age-banner-text" data-i18n="app.age_notice">
+      Adult educational reference (18+). Piercers require government identification and informed adult consent prior to consultation.
+    </span>
   </div>
 
-  <div class="select-card">
-    <div class="form-grid">
-      <div class="form-field">
-        <label for="anatomy-filter">Anatomy type</label>
-        <select id="anatomy-filter" class="input-field">
-          <option value="all">All placements</option>
-          <option value="female">Female anatomy</option>
-          <option value="male">Male anatomy</option>
+  <!-- Search and Navigation Controls -->
+  <div class="search-card" id="search-card">
+    <div class="search-field-wrapper">
+      <label for="placement-search" class="visually-hidden" data-i18n="action.search_label">Search piercing placement</label>
+      <div class="search-input-group">
+        <span class="search-icon" aria-hidden="true">🔍</span>
+        <input
+          type="search"
+          id="placement-search"
+          class="search-input"
+          placeholder="Search placement or common name (e.g. VCH, clit hood, PA, guiche)..."
+          data-i18n-attr="placeholder:action.search_placeholder"
+          autocomplete="off"
+        >
+        <button type="button" id="clear-search-btn" class="btn-clear-search" aria-label="Clear search" data-i18n-attr="aria-label:action.clear_search">✕</button>
+      </div>
+    </div>
+
+    <div class="filter-row">
+      <div class="filter-col">
+        <label for="anatomy-filter" class="control-label" data-i18n="action.anatomy_filter_label">Filter by anatomy</label>
+        <select id="anatomy-filter" class="select-field" aria-label="Filter placements by anatomy category" data-i18n-attr="aria-label:action.anatomy_filter_aria">
+          <option value="all" data-i18n="action.filter_all">All placements (14)</option>
+          <option value="female" data-i18n="action.filter_female">Female anatomy placements</option>
+          <option value="male" data-i18n="action.filter_male">Male anatomy placements</option>
+          <option value="neutral" data-i18n="action.filter_neutral">Shared / perineal placements</option>
         </select>
       </div>
-      <div class="form-field">
-        <label for="piercing-select">Piercing type</label>
-        <select id="piercing-select" class="input-field"></select>
+
+      <div class="filter-col">
+        <label for="placement-select" class="control-label" data-i18n="action.select_placement">Select placement</label>
+        <select id="placement-select" class="select-field" aria-label="Select genital piercing placement" data-i18n-attr="aria-label:action.select_placement_aria"></select>
       </div>
     </div>
   </div>
 
-  <div id="piercing-info"></div>
+  <!-- Active Placement Reference Card -->
+  <h2 class="card-mount-title" id="placement-card-title" data-i18n="section.placement_card_title">Placement Anatomy Reference</h2>
+  <main id="placement-card-container" class="card-mount" aria-live="polite"></main>
 
-  <div class="disclaimer">
-    <strong>Important:</strong> Anatomy suitability cannot be assessed remotely. All information here is
-    educational — actual suitability requires in-person examination by a qualified APP-certified piercer.
-    Do not perform or modify genital piercings without professional guidance. If you experience pain,
-    unusual discharge, or signs of infection, seek medical attention promptly.
-  </div>
+  <!-- Interactive Consultation Worksheet: "Is It Right for Me?" -->
+  <section class="worksheet-section" id="worksheet-section">
+    <div class="worksheet-card" id="worksheet-card">
+      <header class="worksheet-header">
+        <h2 class="worksheet-title" data-i18n="section.consult_builder_title">“Is It Right for Me?” Private Consultation Worksheet</h2>
+        <p class="worksheet-intro" data-i18n="section.consult_builder_intro">
+          Use this private space to reflect on questions you can bring directly to your in-person consultation. Nothing typed here is sent anywhere. Suitability is only determined during an in-person physical examination by an experienced professional piercer.
+        </p>
+      </header>
+
+      <div class="worksheet-prompts">
+        <div class="prompt-item">
+          <div class="prompt-header">
+            <span class="prompt-title" data-i18n="prompt.comfort_exam">Comfort with in-person physical assessment</span>
+          </div>
+          <p class="prompt-desc" data-i18n="prompt.comfort_exam_desc">
+            An experienced professional piercer must palpate and measure tissue tension, hood depth, or glans thickness.
+          </p>
+        </div>
+
+        <div class="prompt-item">
+          <div class="prompt-header">
+            <span class="prompt-title" data-i18n="prompt.healing_commitment">Time & activity flexibility for healing</span>
+          </div>
+          <p class="prompt-desc" data-i18n="prompt.healing_commitment_desc">
+            Genital piercings require strict hygiene, loose clothing, and temporary adjustments to sexual activity or athletic strain.
+          </p>
+        </div>
+      </div>
+
+      <div id="talking-points-mount" class="talking-points"></div>
+
+      <div class="notes-field-group">
+        <label for="client-notes-area" class="notes-label" data-i18n="prompt.personal_notes">
+          My private notes & questions for consultation
+        </label>
+        <textarea
+          id="client-notes-area"
+          class="notes-textarea"
+          rows="4"
+          placeholder="Type personal considerations, questions, or medical notes to discuss with your piercer..."
+          data-i18n-attr="placeholder:prompt.personal_notes_placeholder"
+        ></textarea>
+      </div>
+
+      <div class="privacy-controls-row">
+        <label class="checkbox-label" for="save-notes-checkbox">
+          <input type="checkbox" id="save-notes-checkbox">
+          <span data-i18n="action.save_notes_label">Save private notes in this browser</span>
+        </label>
+        <button type="button" id="clear-notes-btn" class="btn btn--text-danger" data-i18n="action.clear_notes">
+          Clear all private notes
+        </button>
+      </div>
+
+      <div class="worksheet-actions">
+        <button type="button" id="print-sheet-btn" class="btn btn--secondary" data-i18n="action.print_sheet">
+          🖨️ Print Consultation Sheet
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shared Section: Why a Piercer Says No -->
+  <section class="shared-reasons-section" id="shared-reasons-section">
+    <h2 class="shared-title" data-i18n="section.shared_reasons_title">
+      Why a Piercer Says No: Clinical Reasons for Refusal
+    </h2>
+    <div id="shared-reasons-container"></div>
+  </section>
+
+  <!-- Clinical & Educational Disclaimer -->
+  <footer class="tool-disclaimer" id="tool-disclaimer" role="contentinfo">
+    <strong data-i18n="disclaimer.title">Clinical & Educational Notice</strong>
+    <p data-i18n="disclaimer.body">
+      This tool is strictly educational and does not provide medical diagnoses or digital suitability verdicts. Suitability can only be determined through an in-person physical consultation with an experienced professional piercer following established professional practice. If you experience severe pain, spreading redness, unusual discharge, or signs of infection, seek prompt medical care.
+    </p>
+  </footer>
 
 </div>
 
-<script src="/tools/genital-piercing-suitability/js/app.js"></script>
+<!-- Printable Container (Rendered on Demand for Print) -->
+<div id="printable-consultation-sheet" class="print-only" aria-hidden="true"></div>
+
+<!-- Scripts loaded in synchronous document order -->
+<script src="js/i18n.js"></script>
+<script src="js/diagrams.js"></script>
+<script src="js/app.js"></script>
 </body>
 </html>
