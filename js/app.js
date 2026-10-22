@@ -455,7 +455,7 @@ function renderPlacementCard() {
         </ul>
         <div class="card-actions">
           <button type="button" class="btn btn--primary" id="btn-print-from-card" onclick="window.printConsultationSheet()">
-            <span aria-hidden="true">🖨️ </span>${escHtml(window.t('action.print_sheet'))}
+            <span aria-hidden="true"><svg class=ti-i width=1.15em height=1.15em aria-hidden=true style=vertical-align:-.18em;flex:none><use href=../shared/icons.svg#i-print></use></svg> </span>${escHtml(window.t('action.print_sheet'))}
           </button>
         </div>
       </div>
